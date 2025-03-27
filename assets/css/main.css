@@ -168,8 +168,8 @@ h6 {
 }
 
 @media (min-width: 1200px) and (max-width: 1600px) {
-  .header ~ main {
-    margin-left: 50px;
+  section:not(:first-of-type) {
+    margin-left: 60px;
   }
 }
 
@@ -515,12 +515,23 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 100vh;
+  min-height: 130vh;
   position: relative;
   padding: 80px 0;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.bg-img {
+  background-image: url("../img/me.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.sec-name {
+  min-height: 70vh;
 }
 
 .hero img {
@@ -530,6 +541,7 @@ section,
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   z-index: 1;
 }
 
@@ -569,7 +581,7 @@ section,
 .hero .social-links a {
   font-size: 20px;
   display: inline-block;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;
