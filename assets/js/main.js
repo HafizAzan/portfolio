@@ -227,4 +227,22 @@
   }
   window.addEventListener("load", navmenuScrollspy);
   document.addEventListener("scroll", navmenuScrollspy);
+
+  let birthDay = 26;
+  let birthMonth = 1;
+  let birthYear = 2007;
+
+  let today = new Date();
+  let currentYear = today.getFullYear();
+
+  let age = currentYear - birthYear;
+
+  if (
+    today.getMonth() + 1 < birthMonth ||
+    (today.getMonth() + 1 === birthMonth && today.getDate() < birthDay)
+  ) {
+    age--;
+  }
+
+  document.getElementById("age").innerText = age;
 })();
